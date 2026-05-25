@@ -5,6 +5,7 @@ const revoraController = new Object();
 revoraController.createdata = async(req,res)=>{
     try {
         let body = req.body;
+          console.log("Body:", body);
         const result = await revoraDal.createdata (body);
           if (!result){
             return {status : false , message : "Something went wrong"};
@@ -16,7 +17,7 @@ revoraController.createdata = async(req,res)=>{
                 phone : body.Mobile,
                 organizationName : body.organizationName,
                 subject : body.subject,
-                Message : body.Message,
+                message : body.message,
             }
             let result = await mailHelper.revoraMail("jinosona123@gmail.com","","Revora Digital",payload);
             if(!result.success){
@@ -35,9 +36,11 @@ revoraController.createdata = async(req,res)=>{
                 country : body.country,
                 city : body.city,
                 help : body.help,
-                message : body.message
+                message : body.message,
+                subject : body.subject
             }
             let result = await mailHelper.revoraMail("jinosona123@gmail.com","","Revora Digital",payload);
+            console.log(result);
             if(!result.success){
                 return {status : false , message : "Something went wrong"};
             }
