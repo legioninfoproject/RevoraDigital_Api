@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const revoraFormSchema = new Schema({
     firstName : { type: String },
     lastName : { type: String },
+    Name : { type: String },
     organizationName : { type: String},
     Email : { type: String},
     LandLine : { type: String},

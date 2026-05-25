@@ -13,7 +13,7 @@ const serverIntiate = async () => {
   // CORS connection for frontend
   app.use(
     cors({
-      origin: "http://localhost:4200", // Angular frontend
+      origin: "http://localhost:3000",
       credentials: true,
     })
   );
