@@ -22,6 +22,7 @@ const startServer = async() =>{
     app.use(bodyparser.urlencoded({ extended: true }));
     app.use(morgan("dev"));
     app.use(express.json());
+    appRoute.Init(app);
     app.use(express.urlencoded({ extended: true }));
     app.listen(dataConfig?.app?.port, () => {
         console.log(`Server is running on port ${dataConfig.app.port}`);
