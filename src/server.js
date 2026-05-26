@@ -24,6 +24,7 @@ const startServer = async() =>{
     app.use(express.json());
     appRoute.Init(app);
     app.use(express.urlencoded({ extended: true }));
+    app.get('/ping', (req, res) => res.send('ok'));
     app.listen(dataConfig?.app?.port, () => {
         console.log(`Server is running on port ${dataConfig.app.port}`);
     });
