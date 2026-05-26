@@ -6,7 +6,7 @@ mailHelper.revoraMail = async (email,cc, subject,payload) => {
     service: "gmail",
     auth: {
       user: process?.env?.SENDER_EMAIL ? process.env.SENDER_EMAIL : 'legioninfoproject@gmail.com',
-      pass: process?.env?.SENDER_EMAIL_PASSWORD ? process.env.SENDER_EMAIL_PASSWORD : 'mabk ukmm sffu jygy',
+      pass: process?.env?.SENDER_EMAIL_PASSWORD ? process.env.SENDER_EMAIL_PASSWORD : 'wync hrtn ehpb ffnw',
     }
   }
  let transporter = nodemailer.createTransport(config);
